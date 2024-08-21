@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='TempMailApi',
-      version='0.1.1',
+      version='0.2.1',
       description='Api for temporary email service',
       url='http://github.com/MD-Levitan/TempMailApi',
       author='kusok',

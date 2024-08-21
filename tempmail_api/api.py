@@ -138,7 +138,7 @@ class PremiumAPI:
 
     @rpc(GetDomainsRequest, GetDomainsResponse)
     @staticmethod
-    def get_domains():
+    def get_domains(sid: str):
         pass
 
     @rpc(MailboxListRequest, MailboxListResponse)

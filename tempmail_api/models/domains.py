@@ -16,14 +16,24 @@ class DomainsResult:
 
 
 @dataclass
+class GetDomainsParams:
+    sid: str = None
+
+    def __init__(self, data: dict):
+        if data is not None:
+            self.__dict__ = data
+
+
+@dataclass
 class GetDomainsRequest(JsonRpcRequest):
     method: str = "getdomains"
-    params: dict = None
+    params: GetDomainsParams = None
 
-    def __init__(self, params=None):
+    def __init__(self, params: GetDomainsParams = None):
         super().__init__(None)
         self.method = "getdomains"
-        self.params = dict()
+        self.params = params
+
 
 
 @dataclass
